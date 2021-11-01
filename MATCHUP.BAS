@@ -162,8 +162,9 @@ ProcessInput:
                 guess2 = selected
             END IF
         ELSE
+			IF bSOUND = "Y" THEN SOUND 300, 2
             LOCATE 23, 20
-            PRINT "Already picked"
+            PRINT "Already Picked"
             GOTO ProcessInput
         END IF
     ELSEIF UCASE$(coord$) = "X" THEN 'enter
@@ -302,7 +303,7 @@ DrawGrid:
 
 DrawCards:
     LOCATE 23, 20
-    'PRINT "                "
+    PRINT "                "
    
     x = 1
     y = 1
